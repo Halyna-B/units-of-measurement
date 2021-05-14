@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@300&display=swap');
+
+:root {
+    --main-font-family: 'KoHo', sans-serif;
+    --main-color: #afa1ff;
+    --text-color: #fefcff;
+}
+
+body {
+    max-width: 980px;
+    margin: auto;
+    background-image: url("./img/bkg-img.jpg");
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+    background-position: center;
+}
+
+.title {
+    font-family: var(--main-font-family);
+    color: var(--main-color);
+    font-size: 21px;
+    text-align: left;
+}
+
+.convert-unit p {
+    font-family: var(--main-font-family);
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.convert-unit {
+    display: flex;
+    padding: 20px;
+
+}
+
+
+.btn-grad {background-image: linear-gradient(to right, #E0EAFC 0%, #CFDEF3  51%, #E0EAFC  100%)}
+.btn-grad {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: var(--main-color);   
+   font-weight: bold;         
+   box-shadow: 0 0 10px #eee;
+   border-radius: 10px;
+   display: block;
+   width: 450px;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+.convertation-value {
+    margin-top: 25px;
+}
+
+input::placeholder {
+    color: rgb(73, 11, 11);
+    font-size: 15px;
+  }
