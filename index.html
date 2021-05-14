@@ -16,7 +16,7 @@
     <main>
         <div class="initial-unit">
             <label>
-                <input type="text" name="units" placeholder="value">
+                <input id="input-value" type="number" name="units" placeholder="value" >
             </label>
             <select name="units">
                 <option value="1">m</option>
@@ -36,11 +36,10 @@
         </div>
             <button class="convert-btn btn-grad">Convert</button>
         <div class="convertation-value">
-            <label>
-                <input type="text" name="convert-unit" placeholder="converted value">
-            </label>
+            <p>Result:</p>
+             <span id="output-value"></span>
         </div>
     </main>
-    
+    <script src="index.js"></script>
 </body>
 </html>
