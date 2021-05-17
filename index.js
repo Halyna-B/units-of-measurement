@@ -1,30 +1,25 @@
-// Сonverted to value(m, cm, in, ft) //
-function conTo(){
-const convertTo = document.querySelector('.options-to');
-return convertTo.value;
-}
-//
 
-//Converted from value(m, cm, in, ft) //
-function conFrom(){
-    const convertFrom = document.querySelector('.options-from');
-    return convertFrom.value
-}
-//
-
-
-function lengthConverterToMeter(value){
+function convertUnits(convertFrom, convertTo, value) {
+    const units = {
+      "m": 1.0,
+      "cm": 0.01,
+      "ft": 0.304,
+      "in": 0.025,
+      "mm": 0.001,
+      "yd": 0.914,
+      "km": 1000,
+    };
+    convertFrom = document.querySelector('.options-from');
+    convertTo = document.querySelector('.options-to');
     value = document.querySelector('#input-value').value
-   document.getElementById('output-value').innerHTML = value*0.01;
-}
+    const convertedValue = (
+      (value * units[convertFrom.value]) /
+      units[convertTo.value]).toFixed(2);
+        document.getElementById('output-value').innerHTML = convertedValue;
+    
+  }
+
 
 const convertBtn = document.querySelector('.convert-btn');
-convertBtn.addEventListener('click', lengthConverterToMeter);
-convertBtn.addEventListener('click', conTo);
+convertBtn.addEventListener('click', convertUnits);
 
-
-
-// Объект в JSON формате, содержащий расстояние заданное для конвертации (distance) со
-// значением (value) и шкалой (unit), a также обозначение единицы для шкалы, в которую
-// должна быть произведена конвертация (convert_to). Например:
-// {"distance": {"unit": "m", "value": 0.5}, "convert_to": "ft"}
