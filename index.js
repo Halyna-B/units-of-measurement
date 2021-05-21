@@ -12,11 +12,14 @@ function convertUnits(convertFrom, convertTo, value) {
     convertFrom = document.querySelector('.options-from');
     convertTo = document.querySelector('.options-to');
     value = document.querySelector('#input-value').value
+    if(value < 0){
+      alert('Please enter a positive number');
+    }else{
     const convertedValue = (
       (value * units[convertFrom.value]) /
       units[convertTo.value]).toFixed(2);
         document.getElementById('output-value').innerHTML = convertedValue;
-    
+    }
   }
 
 
